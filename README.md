@@ -1,30 +1,110 @@
-# React + TypeScript + Vite
+# nexus
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+This project is built using React with TypeScript and ShadCN. It includes features for user authentication, and the creation and listing of posts.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- User authentication
+- Post creation
+- Post listing
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
+- React
+- TypeScript
+- ShadCN
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Dependencies
+
+- `@radix-ui/react-label`: ^2.1.0
+- `@radix-ui/react-select`: ^2.1.1
+- `@radix-ui/react-slot`: ^1.1.0
+- `@radix-ui/react-toast`: ^1.2.1
+- `@types/react-router-dom`: ^5.3.3
+- `axios`: ^1.7.3
+- `class-variance-authority`: ^0.7.0
+- `clsx`: ^2.1.1
+- `lucide-react`: ^0.424.0
+- `react`: ^18.3.1
+- `react-dom`: ^18.3.1
+- `react-icons`: ^5.2.1
+- `react-router-dom`: ^6.26.0
+- `tailwind-merge`: ^2.4.0
+- `tailwindcss-animate`: ^1.0.7
+
+## Installation
+
+To get started with this project, follow these steps:
+
+1. **Clone the repository:**
+
+2. Install dependencies:
+Make sure you have Node.js installed, then run:
+```
+npm install
+```
+4. Start the development server:
+ ```
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+##  Usage
+Authentication:
+
+Implement user authentication using the provided authentication routes.
+Post Creation:
+
+Create new posts using the provided post creation feature.
+Post Listing:
+
+View a list of all posts using the provided post listing feature.
+## Folder Structure
+```
+└── 📁front-end
+    └── .eslintrc.cjs
+    └── .gitignore
+    └── components.json
+    └── index.html
+    └── package-lock.json
+    └── package.json
+    └── postcss.config.js
+    └── 📁public
+        └── vite.svg
+    └── README.md
+    └── 📁src
+        └── App.css
+        └── App.tsx
+        └── 📁assets
+            └── react.svg
+        └── 📁components
+            └── 📁ui
+                └── button.tsx
+                └── input.tsx
+                └── label.tsx
+                └── select.tsx
+                └── toast.tsx
+                └── toaster.tsx
+                └── use-toast.ts
+        └── 📁hooks
+            └── useAuth.tsx
+        └── index.css
+        └── 📁lib
+            └── utils.ts
+        └── main.tsx
+        └── 📁pages
+            └── Acceuil.tsx
+            └── Dashboard.tsx
+            └── SheetIn.tsx
+            └── SignIn.tsx
+            └── SignUp.tsx
+        └── vite-env.d.ts
+    └── tailwind.config.js
+    └── tsconfig.app.json
+    └── tsconfig.json
+    └── tsconfig.node.json
+    └── vite.config.ts
+```
+
