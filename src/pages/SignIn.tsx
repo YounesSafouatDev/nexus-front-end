@@ -29,7 +29,7 @@ const SignIn: React.FC = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('https://nexus-back-end.onrender.com//auth/login', formData, {
+            const response = await axios.post('https://nexus-back-end.onrender.com/auth/login', formData, {
                 headers: {
                     'Content-Type': 'application/json',
                 },

@@ -40,7 +40,7 @@ const SheetIn: React.FC = () => {
         const fetchPostType = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get('https://nexus-back-end.onrender.com//api/posts/post-type', {
+                const response = await axios.get('https://nexus-back-end.onrender.com/api/posts/post-type', {
                     headers: { Authorization: `${token}` }
                 });
                 setFormData(prevData => ({
@@ -133,7 +133,7 @@ const SheetIn: React.FC = () => {
         };
 
         try {
-            const response = await axios.post('https://nexus-back-end.onrender.com//api/posts/create', dataToSubmit, {
+            const response = await axios.post('https://nexus-back-end.onrender.com/api/posts/create', dataToSubmit, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `${localStorage.getItem('token')}`

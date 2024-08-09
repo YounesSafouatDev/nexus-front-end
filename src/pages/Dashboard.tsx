@@ -38,7 +38,7 @@ const Dashboard: React.FC = () => {
                 const token = localStorage.getItem('token');
 
                 // Fetch user type
-                const userTypeResponse = await axios.get('https://nexus-back-end.onrender.com//api/posts/post-type', {
+                const userTypeResponse = await axios.get('https://nexus-back-end.onrender.com/api/posts/post-type', {
                     headers: {
                         Authorization: `${token}`,
                     },
@@ -50,7 +50,7 @@ const Dashboard: React.FC = () => {
                 const oppositePostType = fetchedUserType === 'devTeam' ? 'orderGiver' : 'devTeam';
 
                 // Fetch posts based on user type
-                const postsResponse = await axios.get('https://nexus-back-end.onrender.com//api/posts', {
+                const postsResponse = await axios.get('https://nexus-back-end.onrender.com/api/posts', {
                     params: {
                         page,
                         limit: 7,
