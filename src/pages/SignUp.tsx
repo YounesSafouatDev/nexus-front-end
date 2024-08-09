@@ -126,7 +126,7 @@ const SignUp: React.FC = () => {
         };
 
         try {
-            const response = await axios.post('http://localhost:3000/auth/register', dataToSubmit, {
+            const response = await axios.post('https://nexus-back-end.onrender.com//auth/register', dataToSubmit, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
