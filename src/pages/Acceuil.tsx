@@ -10,7 +10,7 @@ const Acceuil: React.FC = () => {
 
     const validateToken = async (token: string) => {
         try {
-            const response = await axios.post('/validate-token', { token });
+            const response = await axios.post('https://nexus-back-end.onrender.com/auth/validate-token', { token });
             return response.data.isValid;
         } catch (error) {
             console.error('Token validation error:', error);

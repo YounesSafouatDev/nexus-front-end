@@ -6,6 +6,7 @@ import SignUp from './pages/SignUp';
 import Acceuil from './pages/Acceuil';
 import Dashboard from './pages/Dashboard';
 import SheetIn from './pages/SheetIn';
+import PrivateRoute from './components/PrivateRoute';
 
 const App: React.FC = () => {
   return (
@@ -14,8 +15,22 @@ const App: React.FC = () => {
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/acceuil" element={<Acceuil />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/sheet-in" element={<SheetIn />} />
+        <Route
+          path="/dashboard"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/sheet-in"
+          element={
+            <PrivateRoute>
+              <SheetIn />
+            </PrivateRoute>
+          }
+        />
         <Route path="*" element={<SignIn />} />
       </Routes>
     </div>
